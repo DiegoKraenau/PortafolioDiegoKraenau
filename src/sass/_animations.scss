@@ -1,0 +1,23 @@
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+@keyframes slide{
+    100%{
+        top: -320px;
+    }
+}
+
+@keyframes sharingan{
+    100%{
+        opacity: 0;
+    }
+
+    0%{
+        opacity: 1;
+    }
+
+}

@@ -1,0 +1,70 @@
+@import "../../../sass/styles.scss";
+
+.AboutMe {
+  width: 100%;
+  height: auto;
+  min-height: 90vh;
+
+  &__content {
+    width: 100%;
+    height: 50vh;
+  }
+
+  &__information {
+    h2 {
+      text-align: center;
+      width: 100%;
+      font-weight: 700;
+      font-size: 60px;
+    }
+
+    .complete__bio {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 50vh);
+
+      .circular--landscape {
+        display: inline-block;
+        position: relative;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .circular--landscape img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+        filter: gray; /* IE6-9 */
+        -webkit-filter: grayscale(
+          0.3
+        ); /* Google Chrome, Safari 6+ & Opera 15+ */
+        filter: grayscale(0.3); /* Microsoft Edge and Firefox 35+ */
+      }
+
+      .mybio {
+        p {
+          width: 100%;
+          height: auto;
+          text-align: justify;
+          letter-spacing: 2px;
+          line-height: 20px;
+        }
+
+        .btn-mycv {
+          text-decoration: none;
+          width: 100px;
+          text-align: center;
+          margin: 40px auto;
+          display: block;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
