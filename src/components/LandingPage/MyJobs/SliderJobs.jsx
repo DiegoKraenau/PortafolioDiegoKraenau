@@ -3,126 +3,52 @@ import LogoWhiz from '../../../img/LogoWhiz.png';
 import LogoProemsa from '../../../img/LogoProemsa.png';
 import LogoForceclose from '../../../img/LogoForceclose.png';
 import './_sliderjobs.scss';
-import { useState, useEffect } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const SliderJobs = () => {
 
-    const [count, setCount] = useState(1)
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 200,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true
+    };
 
 
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (count === 3) {
-                setCount(1)
-            } else {
-                setCount(count + 1)
-            }
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [count])
-
-    const renderSlide1 = (param) => {
-        switch (param) {
-            case 1:
-                return (
-                    <div className="myslide firts_change_1">
-                        <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-            case 2:
-                return (
-                    <div className="myslide second_change">
-                         <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-            case 3:
-                return (
-                    <div className="myslide third_change">
-                         <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-            default:
-                return (
-                    <div className="myslide">
-                         <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-        }
-    }
-
-    const renderSlide2 = (param) => {
-        switch (param) {
-            case 1:
-                return (
-                    <div className="myslide firts_change_2">
-                        <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-            case 2:
-                return (
-                    <div className="myslide second_change">
-                        <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-            case 3:
-                return (
-                    <div className="myslide third_change">
-                        <img src={LogoProemsa} alt="logoproemsa"></img>
-                    </div>
-                );
-            default:
-                return (
-                    <p></p>
-                );
-        }
-    }
-
-    const renderSlide3 = (param) => {
-        switch (param) {
-            case 1:
-                return (
-                    <div className="myslide firts_change_3">
-                        <img src={LogoForceclose} alt="logoforceclose"></img>
-                    </div>
-                );
-            case 2:
-                return (
-                    <div className="myslide prueba ">
-                        <img src={LogoForceclose} alt="logoforceclose"></img>
-
-                    </div>
-                );
-            case 3:
-                return (
-                    <div className="myslide test">
-                        <img src={LogoForceclose} alt="logoforceclose"></img>
-
-                    </div>
-                );
-            default:
-                return (
-                    <p>hola</p>
-                );
-        }
-    }
 
 
     return (
         <section className="jobs">
             <section className="jobs__content container">
-                {
-                    renderSlide1(count)
-                }
-                {
-                    renderSlide2(count)
-                }
-                {
-                    renderSlide3(count)
-                }
-
+                <h2 className="jobs__content__subtitle">Work Experience</h2>
+                <Slider {...settings} className="prueba">
+                    <div className="slide">
+                        <img src={LogoUpc} alt="logoUPC" />
+                        <p>Softare Engenieer Student</p>
+                        <p>03/2017 - Now</p>
+                    </div>
+                    <div className="slide">
+                        <img src={LogoProemsa} alt="logoUPC" />
+                        <p>Develper Junior</p>
+                        <p>03/2020 - 08/2020</p>
+                    </div>
+                    <div className="slide">
+                        <img src={LogoForceclose} alt="logoUPC" />
+                        <p>Java Developer Junior</p>
+                        <p>10/2020 - 02/2021</p>
+                    </div>
+                    <div className="slide">
+                        <img src={LogoWhiz} alt="logoUPC" />
+                        <p>Functional Analist</p>
+                        <p>01/2021 - Now</p>
+                    </div>
+                </Slider>
             </section>
-            <p>{count}</p>
         </section>
     );
 }

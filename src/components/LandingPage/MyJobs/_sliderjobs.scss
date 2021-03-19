@@ -2,98 +2,31 @@
 
 .jobs {
   width: 100%;
-  height: 1400px;
+  height: 600px;
 
   &__content {
     width: 100%;
-    height: 15%;
-    position: relative;
-    overflow: hidden;
-    background: blue;
+    height: 300px;
 
-    .myslide {
-      width: 25%;
+    .slide {
+      width: 20px;
       height: 100px;
-      margin: 30px;
-      display: inline-flex;
-      //animation: rot 2s infinite;
+      margin: 0 auto;
 
+      p {
+        color: $white;
+        text-align: center;
+      }
       img {
-        width: 100%;
-        filter: grayscale(70%);
+        text-align: center;
+        margin: 0px auto;
       }
     }
 
-    /*Firts slide*/
-    .firts_change_1 {
-      animation: return1_1 1s forwards;
-      animation-delay: 1s;
-    }
-
-    .second_change {
-      animation: return1_2 1s forwards;
-      animation-delay: 0s;
-    }
-
-    .third_change {
-      animation: return1_3 1s forwards;
-      animation-delay: 0s;
-    }
-
-    /*Second Slider*/
-    .firts_change_2 {
-      animation: return2_1 1s forwards;
-      animation-delay: 1s;
-    }
-
-    /*Third Slider*/
-    .firts_change_3 {
-      animation: return3_1 1s forwards;
-      animation-fill-mode: forwards;
-      animation-delay: 1s;
-    }
-    .second_change_3 {
-      animation: return3_2 1s forwards;
-      animation-delay: 1s;
+    &__subtitle{
+      color: $white;
+      font-size: 60px;
+      text-align: center;
     }
   }
-}
-
-.prueba {
-  @keyframes p {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translate(-220%);
-    }
-  }
-  animation: p 1s forwards;
-  animation-delay: 0s;
-}
-
-.test {
-  @keyframes q {
-    0% {
-      //transform: translate(-200%);
-    }
-    20% {
-      transform: translateX(-200%);
-      opacity: 0;
-      // transform: translateX(200%)
-    }
-
-    21% {
-      opacity: 0;
-      transform: translateX(300%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0%);
-      //transform: translateX(-200%)
-    }
-  }
-  animation: q 1s forwards;
-  animation-delay: 0s;
 }

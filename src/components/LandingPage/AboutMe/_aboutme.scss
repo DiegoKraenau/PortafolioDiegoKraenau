@@ -3,10 +3,10 @@
 .AboutMe {
   width: 100%;
   height: auto;
-  min-height: 90vh;
+  min-height: 57vh;
 
-  @include breakpoint-up(medium){
-    min-height: 100vh;
+  @include breakpoint-up(medium) {
+    min-height: 80vh;
   }
 
   &__content {
@@ -25,7 +25,7 @@
         font-size: 45px;
       }
 
-      @include breakpoint-up(medium){
+      @include breakpoint-up(medium) {
         font-size: 1.875rem;
         margin-bottom: 14px;
       }
@@ -87,7 +87,7 @@
           text-align: justify;
           letter-spacing: 2px;
           line-height: 30px;
-          
+
           @include breakpoint-up(medium) {
             line-height: 20px;
           }
