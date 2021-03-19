@@ -19,7 +19,7 @@ body {
   font-weight: 400;
   background: $darkpurple;
   color: $white;
-  font-size: 16px;
+  font-size: 14px;
   height: 100%;
   overflow-x: hidden;
   overflow: hidden;
@@ -71,6 +71,10 @@ body {
   box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
 
   &:hover {
+
+    i{
+      color: $white;
+    }
     background: $lightpurple;
     color: $white;
   }
@@ -82,4 +86,21 @@ body {
 
 .display_block{
   display: block;
+}
+
+.icon{
+  color: $lightpurple;
+  display: inline-block;
+  margin-right: 5px;
+  transition: .5s all ease-in-out;
+}
+
+.slider{
+  width:400px;
+  margin:20px auto;
+  text-align: center;
+  padding:20px;
+  color:white;
+  .parent-slide{padding:15px;}
+  img{display: block;margin:auto;}
 }

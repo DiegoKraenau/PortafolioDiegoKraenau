@@ -1,7 +1,9 @@
 import './_aboutme.scss';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import MyPhoto from '../../../img/myphoto.jpg';
 import MyCv from '../../../img/CVDiegoKraenau.docx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const AboutMe = () => {
 
@@ -12,6 +14,8 @@ const AboutMe = () => {
             mycv: MyCv
         }
     )
+
+
 
     return (
         <section className="AboutMe">
@@ -24,11 +28,13 @@ const AboutMe = () => {
                         </div>
                         <div className="mybio">
                             <p>{myinformation.bio}</p>
-                            <a className="button btn-mycv" href={myinformation.mycv} download="CVDiegoKraenau">My CV</a>
+
+                            <a className="button btn-mycv" href={myinformation.mycv} download="CVDiegoKraenau"><i className="icon"><FontAwesomeIcon icon="cloud-download-alt" /></i> My CV</a>
                         </div>
                     </div>
                 </div>
             </section>
+
         </section>
     );
 }

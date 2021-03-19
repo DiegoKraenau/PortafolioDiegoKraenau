@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import AboutMe from "./AboutMe/AboutMe";
 import Header from "./Header/Header";
+import SliderJobs from "./MyJobs/SliderJobs";
 
 
 const LandingPage = () => {
@@ -8,6 +9,7 @@ const LandingPage = () => {
         <Fragment>
             <Header></Header>
             <AboutMe></AboutMe>
+            <SliderJobs></SliderJobs>
         </Fragment>
      );
 }
