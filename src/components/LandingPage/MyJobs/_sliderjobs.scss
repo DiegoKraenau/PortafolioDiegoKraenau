@@ -2,14 +2,14 @@
 
 .jobs {
   width: 100%;
-  height: 600px;
+  height: auto;
+  min-height: 350px;
 
   &__content {
     width: 100%;
-    height: 300px;
+    height: 250px;
 
     .slide {
-      width: 20px;
       height: 100px;
       margin: 0 auto;
 
@@ -20,13 +20,31 @@
       img {
         text-align: center;
         margin: 0px auto;
+
+        @include breakpoint-up(small) {
+          width: 50%;
+        }
       }
     }
 
-    &__subtitle{
+    &__subtitle {
       color: $white;
       font-size: 60px;
       text-align: center;
+
+      @include breakpoint-up(large) {
+        font-size: 45px;
+      }
     }
   }
+}
+
+.prueba {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white !important;
 }

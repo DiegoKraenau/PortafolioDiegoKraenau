@@ -1,6 +1,6 @@
 import './_aboutme.scss';
 import { Fragment, useState } from 'react';
-import MyPhoto from '../../../img/myphoto.jpg';
+import MyPhoto from '../../../img/photo2.jpg';
 import MyCv from '../../../img/CVDiegoKraenau.docx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
