@@ -14,24 +14,42 @@
     }
 
     &__items {
-      margin: 0 auto;
-      width: 60%;
-      background: $lightpurple;
-      height: 200px;
-      border-radius: 30px;
-      -webkit-box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: -1px 3px 9px 0px rgba(0, 0, 0, 0.75);
+      width: 100%;
+      height: 900px;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
 
-      h3 {
-        text-align: center;
-        padding-top: 20px;
+    &__item {
+      display: flex;
+      width: 100%;
+      height: 250px;
+      justify-content: space-between;
+      margin-bottom: 70px;
+
+      .img-gif {
+        width: 50%;
+        max-width: 600px;
+        height: 100%;
+        
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
       }
 
-      p {
-        margin: 20px auto;
-        width: 80%;
-        letter-spacing: 2px;
+      .text-item {
+        width: 40%;
+        padding: 10px;
+        h3 {
+          display: block;
+          text-align: center;
+          margin: 0px;
+        }
       }
     }
   }
@@ -39,7 +57,7 @@
 
 .repo-source {
   width: 60px;
-  margin: 0 auto;
+  margin: 10px auto;
 
   & img:not(:last-child) {
     margin-right: 20px;
@@ -48,5 +66,26 @@
   img {
     width: 20px;
     height: 20px;
+  }
+}
+
+.featured {
+  text-align: right;
+  font-size: 13px;
+}
+
+.description {
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+.technologies {
+  display: flex;
+  justify-content: end;
+
+  & p:not(:last-child) {
+    display: block;
+    font-size: 13px;
+    margin-right: 20px;
   }
 }
